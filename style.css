@@ -1,0 +1,303 @@
+:root {
+    --primary: #5b90ab;
+    --dark:rgb(51, 51, 51);
+    --light:#e0e0e0;
+    --shadow: 1px 1px 3px rgba(131, 132, 132, 0.199);
+}
+
+html{
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--dark)
+}
+
+body{
+    margin-left: 3vw;
+    margin-right: 3vw;
+    background: var(--primary);
+    text-align: center;
+    line-height: 1.4;
+    font-size: 1.1em;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: var(--shadow);
+}
+
+h1, h2, h3 {
+    padding: 1.1em;
+    margin: 0;
+    color: var(--dark);
+    letter-spacing: 1.5px;
+}
+
+p{
+    margin: 0;
+    padding: 1em 1em;
+}
+
+span{
+    color: var(--dark);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.btn{
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    background: var(--light);
+    color: var(--dark);
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 200ms linear;
+    margin: auto;
+}
+
+.btn:hover{
+    color: var(--light);
+    background: var(--dark); 
+}
+
+
+/*shpwcase section top header*/
+
+.showcase{
+    height: 400px;
+    margin: 30px 0px;
+    border-radius: 50px;
+    box-shadow: 5px 3px 5px rgba(51, 51, 51, 0.452);
+    
+}
+.showcase .container{
+    
+    height: 100%;
+    width: 100%;
+}
+
+.showcase .bg-image {   
+    
+    position: absolute;
+    background: var(--dark) url(top.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    width: 93.9%;
+    height: 400px;
+    z-index: -1;  
+}
+
+.showcase  h1{
+    padding: 3px 2px;
+    color: black;   
+}
+
+.showcase  h3{
+    padding-top: 0px;
+    padding-bottom: 180px;
+    color: black;
+    text-transform: capitalize;
+}
+
+/*about section*/
+
+.about{
+    padding: 1.5em;
+    background: var(--light);
+    border-radius: 50px;
+    margin: 30px 0px;
+    box-shadow: 5px 3px 5px rgba(51, 51, 51, 0.452);
+}
+
+.about h2{
+   padding: 10px;
+    
+}
+
+.about p {
+     padding-bottom: 30px;
+     font-weight: bold;
+     text-align: justify;
+     text-align-last: center;
+ }
+
+/* cities section*/
+   
+.cities{
+    margin: 30px 0px;
+    
+    display: grid;
+    background: var(--light);
+    border-radius:50px;
+    height: 100%;
+    padding: 1em;
+    grid-template-areas: 
+    'banner'
+     'list';
+     box-shadow: 5px 3px 5px rgba(51, 51, 51, 0.452);
+} 
+.cities .cities-banner{
+    grid-area: banner;
+}
+
+.cities-banner h1{
+    padding: 0;
+    margin: 0; 
+      
+}
+
+.cardlist{
+    justify-content: center;
+    grid-area: list;
+    display: grid;
+    grid-template-areas: 
+    'toronto vancouver newyork';
+    height: 280px;
+    grid-gap: 5px;
+    grid-auto-columns: 33.33%;
+    
+}
+
+.cardlist h3{
+    color:var(--light);
+    background: #5b90ab8a;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    padding-bottom: 10px;
+    font-size: 1.0rem;
+    text-align: center;
+}
+
+
+.card1{
+    grid-area: toronto;
+    background: url(https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    
+    border-bottom-left-radius: 50px;
+    box-shadow: var(--shadow);
+}
+    
+.card2{
+    grid-area: vancouver;
+    background: url(vancouver.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    box-shadow: var(--shadow);
+}
+
+.card3{
+    grid-area: newyork;
+    background: url(https://images.pexels.com/photos/416053/pexels-photo-416053.jpeg?top.jpg=ompress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    
+    border-bottom-right-radius: 50px;
+    box-shadow: var(--shadow);
+}
+
+.card1, .card2, .card3 {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+    transition: all 200ms linear;
+
+}
+
+.card1:hover, .card2:hover, .card3:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+
+.share-content{
+    margin: 30px 0px;
+    display: grid;
+    background: var(--light);
+    border-radius:50px;
+    height: 200px;
+    padding: 1em;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 50%;
+    box-shadow: 5px 3px 5px rgba(51, 51, 51, 0.452);
+      
+}
+
+.share-content h3{
+    
+    padding-bottom: 0;
+}
+
+.share-content p{
+    padding: 0 10px;
+    margin: 0;
+    font-size: medium;
+    align-items: center;
+}
+
+.download, .share{
+    display: grid;
+    position: relative;
+    height: 100%;
+    grid-auto-rows: 33.33%;
+    text-align: center;
+    
+}
+
+.link{
+    margin: auto;
+}
+
+footer{
+    display: flex;
+    font-size: 1rem;
+    justify-content: space-between;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--light)
+}
+
+
+@media (max-width:500px){
+
+    .cardlist{
+        display: grid;
+        grid-template-areas: 
+        'toronto toronto toronto'
+        'vancouver vancouver vancouver'
+        'newyork newyork newyork';
+        width: 100%;
+        height: 400px;
+    }
+
+    .cardlist h3{
+        padding: 5px;
+
+    }
+    .card1{
+        border-bottom-left-radius: 0;
+    }
+    .card3{
+        border-bottom-left-radius: 50px;
+    }
+    .share-content p{
+        font-size: small;
+    }
+
+    footer{
+        font-size: 0.5rem;
+    }
+
+}
